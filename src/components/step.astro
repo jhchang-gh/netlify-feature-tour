@@ -1,0 +1,33 @@
+---
+const { title, link, buttontext, srtext } = Astro.props;
+---
+
+<style>
+
+.step {
+    background: var(--white);
+    border: 1px solid var(--lightBorder);
+    border-radius: var(--card-radius);
+    display: flex;
+    flex-direction: column;
+    font-size: 0.75rem;
+    padding: 1rem 1.5rem 1.5rem;
+    text-align: left;
+    box-shadow: 0 2px 4px rgb(14 30 37 / 12%);
+}
+
+.stepHeading {
+    font-size: 1rem;
+    font-weight: 600;
+    margin: 0;
+}
+
+</style>
+
+
+<section class="step">
+    <h2 class="stepHeading">{title}</h2>
+    <p><slot /></p>
+    <a href={link} class="button">Learn more<span class="sr-only"> {srtext}</span>
+    </a>
+</section>

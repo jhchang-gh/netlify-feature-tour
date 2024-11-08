@@ -1,0 +1,10 @@
+---
+const { title, description, fullsize } = Astro.props;
+---
+
+<div class:list={[ 'text-center', { "w-full": {fullsize} } ]}>
+    <h2 class="text-center">{title}</h1>
+    <p class="text-bold">{description}</p>
+    <slot />
+</div>
+
